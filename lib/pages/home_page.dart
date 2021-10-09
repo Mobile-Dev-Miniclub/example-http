@@ -19,10 +19,10 @@ class _HomePageState extends State<HomePage> {
               Text(output),
               ElevatedButton(
                   onPressed: () {
-                    UserModel.getUsers("1").then((users) {
+                    UserList.getUsers("1").then((users) {
                       output = "";
                       for (int i = 0; i < users.length; i++)
-                        output = output + "[" + users[i].name + "]";
+                        output = output + "[" + users[i].name + "]\n";
                       setState(() {});
                     });
                   },
